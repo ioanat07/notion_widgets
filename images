@@ -1,1 +1,3 @@
-images/.gitkeep
+git add .
+git commit -m "Deleted about.html"
+git push
