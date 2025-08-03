@@ -2,26 +2,20 @@
 <html>
 
 <head>
-
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 	<!-- Google Font -->
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-
-	<!-------->
 
 	<style>
 		* {
 			margin: 0;
 			padding: 0;
-			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 		}
-
 
 		.navMenu {
 			font-family: 'Advent Pro', sans-serif;
@@ -45,11 +39,9 @@
 
 		.border {
 			border: 1px solid #b29bdc;
-
 		}
 
 		.navMenu a:hover {
-
 			color: #9bdcb2;
 		}
 	</style>
@@ -57,45 +49,54 @@
 
 <body>
 
-	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <img src="images/this_computer.png" alt="home icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> home </strong></a>
-		<a id="self" onclick="navigate(this.id)" href="#"> <img src="images/notepad.png" alt="self icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> self </strong></a>
-		<a id="travel" onclick="navigate(this.id)" href="#"> <img src="images/world.png" alt="travel icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> travel </strong></a>
-		<a id="work" onclick="navigate(this.id)" href="#"> <img src="images/program.png" alt="work icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img></i><strong> work </strong></a>
-		<a id="entertainment" onclick="navigate(this.id)" href="#"> <img src="images/movies.png" alt="entertainment icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> entertainment </strong></a>
-		<a id="new home" onclick="navigate(this.id)" href="#"> <img src="images/phone.png" alt="new home icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> new home </strong></a>
-		<a id="ideas" onclick="navigate(this.id)" href="#"> <img src="images/text_file_2.png" alt="ideas icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></img><strong> ideas </strong></a>
-
+	<nav class="navMenu border">
+		<a id="home" onclick="navigate(this.id)" href="#"> 
+			<img src="images/this_computer.png" alt="home icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> home </strong>
+		</a>
+		<a id="self" onclick="navigate(this.id)" href="#"> 
+			<img src="images/notepad.png" alt="self icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> self </strong>
+		</a>
+		<a id="travel" onclick="navigate(this.id)" href="#"> 
+			<img src="images/world.png" alt="travel icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> travel </strong>
+		</a>
+		<a id="work" onclick="navigate(this.id)" href="#"> 
+			<img src="images/program.png" alt="work icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> work </strong>
+		</a>
+		<a id="entertainment" onclick="navigate(this.id)" href="#"> 
+			<img src="images/movies.png" alt="entertainment icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> entertainment </strong>
+		</a>
+		<a id="new home" onclick="navigate(this.id)" href="#"> 
+			<img src="images/phone.png" alt="new home icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> new home </strong>
+		</a>
+		<a id="ideas" onclick="navigate(this.id)" href="#"> 
+			<img src="images/text_file_2.png" alt="ideas icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+			<strong> ideas </strong>
+		</a>
 	</nav>
 
-
 	<script>
-
-		let direction = "horizontal";
-		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-		}
-
-
 		function navigate(id) {
+			const links = {
+				"home": "https://www.notion.so/dashboard-e8116b6a7b88427381c9abb92bd55053?source=copy_link",
+				"self": "https://www.notion.so/self-227b5775e87b4a0f87c85ac42478848c?source=copy_link",
+				"travel": "https://www.notion.so/travel-8a23c5b442e540108c8e2f3c5ad8c0e6?source=copy_link",
+				"work": "https://www.notion.so/work-051e9c21c13843cc9eea78e72fd58a93?source=copy_link",
+				"entertainment": "https://www.notion.so/entertainment-0dc9bfa569844155a7c6e76e2f4ff627?source=copy_link",
+				"new home": "https://www.notion.so/new-home-a4f21a453e724c34bb9042d194846812?source=copy_link",
+				"ideas": "https://www.notion.so/Ideas-aa7a737350cf476cb3598d07e6870b3a?source=copy_link"
+			};
 
-			if (id == 'home')
-				window.location.href("https://www.notion.so/dashboard-e8116b6a7b88427381c9abb92bd55053?source=copy_link", '_blank').focus();
-			else if (id == "self")
-				window.location.href("https://www.notion.so/self-227b5775e87b4a0f87c85ac42478848c?source=copy_link", '_blank').focus();
-			else if (id == "travel")
-				window.location.href("https://www.notion.so/travel-8a23c5b442e540108c8e2f3c5ad8c0e6?source=copy_link", '_blank').focus();
-			else if (id == "work")
-				window.location.href("https://www.notion.so/work-051e9c21c13843cc9eea78e72fd58a93?source=copy_link", '_blank').focus();
-			else if (id == "entertainment")
-				window.location.href("https://www.notion.so/entertainment-0dc9bfa569844155a7c6e76e2f4ff627?source=copy_link", '_blank').focus();
-			else if (id == "new home")
-				window.location.href("https://www.notion.so/new-home-a4f21a453e724c34bb9042d194846812?source=copy_link", '_blank').focus();
-			else if (id == "ideas")
-				window.location.href("https://www.notion.so/Ideas-aa7a737350cf476cb3598d07e6870b3a?source=copy_link", '_blank').focus();
+			if (links[id]) {
+				window.open(links[id], '_self'); // Open in same tab
 			}
+		}
 	</script>
-
 
 </body>
 
